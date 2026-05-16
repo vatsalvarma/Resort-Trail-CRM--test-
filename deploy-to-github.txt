@@ -1,0 +1,21 @@
+COPY THESE COMMANDS AND RUN THEM ONE BY ONE IN YOUR TERMINAL:
+
+1. Initialize git:
+git init
+
+2. Add all files:
+git add .
+
+3. Create first commit:
+git commit -m "Initial commit - Village Trails CRM"
+
+4. Rename branch to main:
+git branch -M main
+
+5. Connect to GitHub (REPLACE WITH YOUR REPO URL):
+git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+
+6. Push to GitHub:
+git push -u origin main
+
+DONE! Now go to GitHub and enable Pages in Settings.

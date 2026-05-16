@@ -1,0 +1,86 @@
+========================================
+DEPLOY NEXT.JS TO GITHUB PAGES - STEP BY STEP
+========================================
+
+STEP 1: UPDATE next.config.ts
+------------------------------
+1. Open: frontend/next.config.ts
+2. Find these lines:
+   // basePath: '/your-repo-name',
+   // assetPrefix: '/your-repo-name/',
+
+3. Remove the // and replace 'your-repo-name' with YOUR actual repo name
+   Example: If your repo is "village-trails-crm", change to:
+   basePath: '/village-trails-crm',
+   assetPrefix: '/village-trails-crm/',
+
+4. Save the file
+
+
+STEP 2: OPEN TERMINAL IN PROJECT FOLDER
+----------------------------------------
+1. Open VS Code terminal (View → Terminal) OR
+2. Open Command Prompt/PowerShell
+3. Navigate to your project folder:
+   cd C:\Users\Asus\Documents\CRM-testout1
+
+
+STEP 3: RUN THESE COMMANDS ONE BY ONE
+--------------------------------------
+Copy and paste each command, press Enter after each:
+
+git init
+
+git add .
+
+git commit -m "Initial commit"
+
+git branch -M main
+
+git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+(Replace YOUR-USERNAME and YOUR-REPO-NAME with yours!)
+
+git push -u origin main
+
+
+STEP 4: ENABLE GITHUB PAGES
+----------------------------
+1. Go to your GitHub repository in browser
+2. Click "Settings" (top menu)
+3. Click "Pages" (left sidebar)
+4. Under "Build and deployment":
+   - Source: Select "GitHub Actions"
+5. That's it! GitHub will automatically deploy
+
+
+STEP 5: WAIT & ACCESS YOUR SITE
+--------------------------------
+1. Go to "Actions" tab in your GitHub repo
+2. Wait for the green checkmark (takes 2-5 minutes)
+3. Your site will be live at:
+   https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/
+
+Example: https://john123.github.io/village-trails-crm/
+
+
+LOGIN CREDENTIALS FOR DEMO:
+----------------------------
+Email: admin@villagetrails.in
+Password: admin123
+
+OR
+
+Email: manager@villagetrails.in
+Password: manager123
+
+
+TROUBLESHOOTING:
+----------------
+If you get errors:
+
+1. "git not found" → Install Git from git-scm.com
+2. "permission denied" → Check your GitHub username/password
+3. "failed to push" → Make sure repo URL is correct
+4. Site shows 404 → Wait 5 minutes, clear browser cache
+
+Need help? Check the Actions tab for error messages.

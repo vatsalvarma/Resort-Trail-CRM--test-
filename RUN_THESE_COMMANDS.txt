@@ -1,0 +1,25 @@
+========================================
+COPY AND RUN THESE COMMANDS ONE BY ONE
+========================================
+
+Command 1 - Initialize Git:
+git init
+
+Command 2 - Add all files:
+git add .
+
+Command 3 - Create first commit:
+git commit -m "Initial commit - Village Trails CRM"
+
+Command 4 - Rename branch to main:
+git branch -M main
+
+Command 5 - Connect to your GitHub repository:
+git remote add origin https://github.com/vatsalvarma/Resort-Trail-CRM--test-.git
+
+Command 6 - Push to GitHub:
+git push -u origin main
+
+========================================
+AFTER RUNNING ALL COMMANDS, GO TO STEP 3
+========================================

@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+
+  /* Light mode */
+  --background:    0 0% 100%;
+  --foreground:    160 25% 10%;
+  --card:          0 0% 100%;
+  --card-foreground: 160 25% 10%;
+  --popover:       0 0% 100%;
+  --popover-foreground: 160 25% 10%;
+  --primary:       145 35% 28%;
+  --primary-foreground: 0 0% 100%;
+  --secondary:     38 40% 94%;
+  --secondary-foreground: 160 25% 15%;
+  --muted:         38 30% 95%;
+  --muted-foreground: 160 15% 45%;
+  --accent:        40 55% 54%;
+  --accent-foreground: 0 0% 100%;
+  --destructive:   0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border:        160 20% 88%;
+  --input:         160 20% 88%;
+  --ring:          145 35% 28%;
+  --radius:        0.75rem;
+
+  /* Custom */
+  --sidebar-bg:    #0d1f17;
+  --sidebar-border: rgba(255,255,255,0.06);
+}
+
+.dark {
+  --background:    160 25% 5%;
+  --foreground:    38 30% 92%;
+  --card:          160 25% 8%;
+  --card-foreground: 38 30% 92%;
+  --popover:       160 25% 8%;
+  --popover-foreground: 38 30% 92%;
+  --primary:       145 35% 45%;
+  --primary-foreground: 160 25% 5%;
+  --secondary:     160 20% 14%;
+  --secondary-foreground: 38 30% 92%;
+  --muted:         160 20% 14%;
+  --muted-foreground: 160 10% 55%;
+  --accent:        40 55% 54%;
+  --accent-foreground: 160 25% 5%;
+  --destructive:   0 62% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border:        160 20% 18%;
+  --input:         160 20% 18%;
+  --ring:          145 35% 45%;
+}
+
+* {
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground)); }
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-dark {
+  background: rgba(13, 31, 23, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #c9a84c 0%, #e9cc62 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Shimmer skeleton animation */
+.skeleton {
+  background: linear-gradient(90deg, hsl(var(--muted)) 25%, hsl(var(--muted-foreground) / 0.1) 50%, hsl(var(--muted)) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Status badge dot */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Page transition */
+.page-enter { opacity: 0; transform: translateY(8px); }
+.page-enter-active { opacity: 1; transform: translateY(0); transition: all 0.25s ease; }
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* Room status colors */
+.room-available  { background-color: #22c55e; }
+.room-booked     { background-color: #ef4444; }
+.room-reserved   { background-color: #f59e0b; }
+.room-maintenance { background-color: #6b7280; }
+.room-checkout   { background-color: #3b82f6; }
+
+/* Print styles */
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; color: black; }
+}
