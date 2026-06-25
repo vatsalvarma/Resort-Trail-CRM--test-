@@ -1,5 +1,8 @@
 # Village Trails Resort CRM Platform
 ---
+<img width="1915" height="864" alt="image" src="https://github.com/user-attachments/assets/13a2cf69-f2a9-490b-a7fd-ef5d4831905b" />
+
+
 https://vatsalvarma.github.io/Resort-Trail-CRM--test-/login
 
 A full-stack, production-ready Resort Management CRM built with **Next.js 15**, **Spring Boot 3.2**, and **PostgreSQL 16**.
